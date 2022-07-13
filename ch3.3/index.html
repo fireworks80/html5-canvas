@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>change font</title>
+  <style>
+    .wrap {
+      /* position: absolute;
+      top: 50px;
+      left: 50px;
+      border: 1px solid; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <canvas width="500" height="500"></canvas>
+  </div>
+  <form>
+    <p>text: <input id="text-input" type="text"></p>
+
+    <p>Fill or Stroke
+      <select id="stroke">
+        <option value="fill">fill</option>
+        <option value="stroke">stroke</option>
+        <option value="both">both</option>
+      </select></p>
+    <p>Text Font:
+      <select id="font-family">
+        <option value="fantasy">fantasy</option>
+        <option value="serif">serif</option>
+        <option value="cursive">cursive</option>
+        <option value="sans-serif">sans-serif</option>
+        <option value="monospace">monospace</option>
+      </select>
+    </p>
+    <p>Text Size <input id="font-size" type="range" min="10" max="100" step="10" value="10"></p>
+    <p>Text Color: <input type="color" id="font-color"></p>
+    <p>font weight
+      <select id="font-weight">
+        <option value="normal">normal</option>
+        <option value="border">border</option>
+        <option value="lighter">lighter</option>
+      </select>
+    </p>
+    <p>
+      Canvas Style Width <input type="range" min="0" max="1000" step="1" value="500" id="width">
+    </p>
+    <p>
+      Canvas Style height <input type="range" min="0" max="1000" step="1" value="300" id="height">
+    </p>
+    <p>
+      <button type="button" id="create-image">Create Image Data</button>
+    </p>
+    <textarea name="" id="text-area" cols="30" rows="10"></textarea>
+  </form>
+  <script src="./script.js"></script>
+</body>
+
+</html>
