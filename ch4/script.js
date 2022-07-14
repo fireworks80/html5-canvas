@@ -22,7 +22,9 @@ const eventWindowLoaded = () => {
     ctx.textBaseline = 'top';
     ctx.fillText('Canvas', 0, 0);
     placeShip(ctx, spaceShip, 0, 0);
-    placeShip(ctx, spaceShip, 50, 50);
+    placeShip(ctx, spaceShip, 0, 34, 32, 32);
+    placeShip(ctx, spaceShip, 0, 68, 64, 64);
+    placeShip(ctx, spaceShip, 0, 140, 16, 16);
   };
 
   drawScreen();

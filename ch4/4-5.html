@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4-5</title>
+</head>
+
+<body>
+  <canvas width="500" height="500"></canvas>
+  <script>
+    const canvas = document.querySelector('canvas');
+    const ctx = canvas.getContext('2d');
+    const {
+      width,
+      height
+    } = canvas;
+    const shipsImg = new Image();
+    shipsImg.src = 'ships.png';
+
+    const drawImage = (img, sx, sy, sw, sh, dx, dy, dw, dh) => {
+      ctx.drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh);
+    };
+
+    const drawScreen = () => {
+      ctx.fillStyle = 'gray';
+      ctx.fillRect(0, 0, width, height);
+      drawImage(shipsImg, 32, 0, 32, 32, 50, 50, 64, 64);
+    };
+    shipsImg.addEventListener('load', drawScreen, false);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4-3</title>
+</head>
+
+<body>
+  <canvas width="256" height="32"></canvas>
+  <script>
+    const init = () => {
+      const canvas = document.querySelector('canvas');
+      const ctx = canvas.getContext('2d');
+      const {
+        width,
+        height
+      } = canvas;
+
+      const drawImage = (img, x, y, width, height) => {
+        ctx.drawImage(img, x, y);
+      };
+
+      const shipsImage = new Image();
+      shipsImage.src = 'ships.png';
+
+
+      const drawScreen = () => {
+        ctx.fillStyle = 'gray';
+        ctx.fillRect(0, 0, width, height);
+        drawImage(shipsImage, 0, 0);
+      };
+
+      drawScreen();
+      shipsImage.addEventListener('load', drawScreen, false);
+    };
+    window.addEventListener('load', init, false);
+  </script>
+</body>
+
+</html>
