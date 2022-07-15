@@ -4,7 +4,7 @@
   "main": "index.js",
   "author": "fireworks <seungchulhan@gmail.com>",
   "scripts": {
-    "start": "lite-server"
+    "start": "lite-server -c bs-config.js"
   },
   "license": "MIT",
   "dependencies": {

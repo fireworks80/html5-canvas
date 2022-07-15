@@ -17,3 +17,7 @@ dw, dh: 캔버스 상에 그릴 사각형 부분의 높이와 폭을 나타낸�
 context.drawImage(Image, 0, 0)
 context.drawImage(Image, 0, 34, 32, 32)
 ```
+
+## cell animation
+
+![탱크 제자리 에서 움직이는 모슴](./tank-move1.gif)
